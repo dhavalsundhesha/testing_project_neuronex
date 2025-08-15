@@ -9,11 +9,13 @@ app.use(express.static(__dirname));
 
 // Root URL पर index.html भेजो
 app.get('/', (req, res) => {
+  console.log("error");
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Optional: किसी भी unknown route पर redirect करो /
 app.get('*', (req, res) => {
+  console.log("error2")
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
