@@ -4,12 +4,12 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-// Public folder से static files serve करो
-app.use(express.static(path.join(__dirname, 'public')));
+// Root folder से static files serve करो
+app.use(express.static(__dirname));
 
-// Root पर index.html भेजो
+// Root URL पर index.html भेजो
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
