@@ -5,11 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Root folder से static files serve करो
-app.use(express.static("index.html"));
+app.use(express.static(__dirname));
 
 // Root URL पर index.html भेजो
 app.get('/', (req, res) => {
-  res.sendFile(path.join('index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
