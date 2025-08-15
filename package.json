@@ -1,9 +1,16 @@
 {
+  "name": "testing_project_neuronex",
+  "version": "1.0.0",
+  "description": "HTML, CSS, JS testing_project_neuronex",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "build": "echo \"No build step required\""
-  }
+  },
   "engines": {
-  "node": "22.16.0"
- }
+    "node": "22.16.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
